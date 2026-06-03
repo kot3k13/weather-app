@@ -12,7 +12,6 @@ import (
 	_ "embed"
 )
 
-// To jest najważniejsza linijka! Nakazuje wklejenie pliku HTML do zmiennej poniżej
 //go:embed index.html
 var htmlContent string
 
