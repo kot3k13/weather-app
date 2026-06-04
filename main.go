@@ -12,7 +12,6 @@ import (
 	_ "embed"
 )
 
-// To jest najważniejsza linijka! Nakazuje wklejenie pliku HTML do zmiennej poniżej
 //go:embed index.html
 var htmlContent string
 
@@ -30,7 +29,6 @@ func main() {
 	flag.Parse()
 
 	if *checkHealth {
-		// Zmiana na 127.0.0.1 specjalnie dla obrazu scratch
 		resp, err := http.Get("http://127.0.0.1:8080/health")
 		if err != nil || resp.StatusCode != 200 {
 			os.Exit(1)
